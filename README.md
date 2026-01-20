@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# 21DAY Bootcamp
 
-## Project info
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![Version](https://img.shields.io/badge/version-0.1.0-lightgrey.svg)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Overview
+The **21DAY Bootcamp** is a premium, full‑stack web application that empowers aspiring professionals with a 21‑day intensive training program. Built with modern technologies, it delivers a seamless, responsive experience across devices.
 
-## How can I edit this code?
+## Features
+- Interactive curriculum with daily lessons
+- Real‑time progress tracking
+- Integrated sponsorship and donation flow
+- Responsive design with glassmorphism and premium UI
+- SEO‑optimized pages and performant build
+- Deployable to any static hosting platform or cPanel
 
-There are several ways of editing your application.
+## Tech Stack
+- **Vite** – Lightning‑fast dev server and bundler  
+- **React** with **TypeScript** – Type‑safe UI components  
+- **shadcn/ui** – Accessible, customizable UI primitives  
+- **Tailwind CSS** – Utility‑first styling with dark mode & animations  
+- **Framer Motion** – Smooth micro‑animations  
+- **Supabase** (optional) – Backend‑as‑a‑Service for auth & data  
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Prerequisites
+- Node.js ≥ 20 (recommended via **nvm**)  
+- npm ≥ 10  
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Installation
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm ci
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run the development server
 npm run dev
 ```
+The app will be available at `http://localhost:5173`.
 
-**Edit a file directly in GitHub**
+### Building for Production
+```bash
+npm run build   # Generates the `dist/` folder
+```
+Deploy the contents of `dist/` to your hosting provider (e.g., cPanel, Vercel, Netlify).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment with cPanel
+A ready‑to‑use `.cpanel.yml` is included:
+```yaml
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dayboopy/public_html/
+    - /bin/cp -R dist/* $DEPLOYPATH
+```
+Update `DEPLOYPATH` to match your account and run the deployment script.
 
-**Use GitHub Codespaces**
+## Contributing
+Contributions are welcome! Please follow these steps:
+1. Fork the repository  
+2. Create a feature branch (`git checkout -b feature/awesome-feature`)  
+3. Commit your changes with clear messages  
+4. Open a Pull Request describing the changes  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All contributions must adhere to the existing code style and pass `npm run lint`.
 
-## What technologies are used for this project?
+## License
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
-This project is built with:
+## Contact & Sponsorship
+For inquiries, partnership opportunities, or to sponsor the program, please fill out the form:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+[Become a Sponsor](https://forms.gle/joSQRC6r6yMZ461n9)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+*Built with ❤️ by the 21DAY Team*

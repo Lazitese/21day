@@ -56,14 +56,14 @@ const StickyNav = () => {
                   21 Day Bootcamp
                 </span>
               </div>
-              
+
               {/* Desktop Nav Links */}
               <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-muted-foreground">
                 {navLinks.map(link => (
-                  <a 
-                    key={link.href} 
-                    href={`#${link.href}`} 
-                    onClick={e => scrollToSection(e, link.href)} 
+                  <a
+                    key={link.href}
+                    href={`#${link.href}`}
+                    onClick={e => scrollToSection(e, link.href)}
                     className="hover:text-foreground transition-colors"
                   >
                     {link.label}
@@ -72,16 +72,19 @@ const StickyNav = () => {
               </div>
 
               <div className="flex items-center gap-2">
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   className="hidden sm:inline-flex bg-foreground text-background hover:bg-foreground/90 rounded-full px-5 shadow-sm text-sm"
+                  asChild
                 >
-                  Sponsor Now
+                  <a href="https://forms.gle/joSQRC6r6yMZ461n9" target="_blank" rel="noopener noreferrer">
+                    Sponsor Now
+                  </a>
                 </Button>
-                
+
                 {/* Mobile Menu Button */}
-                <button 
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="lg:hidden flex items-center justify-center h-9 w-9 rounded-lg bg-muted/60 border border-border/50 text-foreground"
                 >
                   {mobileMenuOpen ? <HiX className="h-5 w-5" /> : <HiMenu className="h-5 w-5" />}
@@ -112,8 +115,10 @@ const StickyNav = () => {
                     </a>
                   ))}
                   <div className="pt-2">
-                    <Button className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-xl">
-                      Sponsor Now
+                    <Button className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-xl" asChild>
+                      <a href="https://forms.gle/joSQRC6r6yMZ461n9" target="_blank" rel="noopener noreferrer">
+                        Sponsor Now
+                      </a>
                     </Button>
                   </div>
                 </div>
